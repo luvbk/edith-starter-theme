@@ -24,33 +24,40 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'edith-starter-theme' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<nav class="navbar align-middle">
-			<div class="container">
-			 	<div class="row">
-			 		<div class="col-xs-10 col-sm-6 site-branding">
-						<?php
-						if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php else : ?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-						endif;
+	    <nav role="navigation" id="navbar-main">
+	      <div class="navbar navbar-inverse navbar-static-top">
+	        <div class="container">
+	          <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+	          <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
 
-						$description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) : ?>
-							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-						<?php
-						endif; ?>		 			
-			 		</div>
-			 		<div id="site-navigation" class="col-xs-2 col-sm-6 main-navigation" role="navigation">
-			 			<a href="#" class="toggle-menu"><span></span></a>
-			 			<div class="mobile-nav">
-							<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-						</div>
-			 		</div>
-			 	</div>
-			</div>
-		</nav>
-	</header><!-- #masthead -->
+	            <?php edith_theme_the_custom_logo(); ?>
+	             
+	          </div>
+
+	          <div class="navbar-collapse collapse navbar-responsive-collapse">
+	            <?php
+					$args = array(
+					'theme_location' => 'menu-1',
+					'depth' => 2,
+					'container' => false,
+					'menu_class' => 'nav navbar-nav navbar-right',
+					'walker' => new Bootstrap_Walker_Nav_Menu()
+					);
+
+					if (has_nav_menu('menu-1')) {
+					wp_nav_menu($args);
+					}
+	            ?>
+
+	          </div>
+	        </div>
+	      </div>           
+	    </nav>
+	  </header><!-- #masthead -->
 
 	<div id="content" class="site-content">
