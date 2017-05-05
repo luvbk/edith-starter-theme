@@ -42,10 +42,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "bootstrap";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
+/*--------------------------------------------------------------
+# Import Bootstrap
+--------------------------------------------------------------*/
+
+@import "bootstrap";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "lib/lib";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -63,11 +72,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
@@ -76,3 +80,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# To do list
+--------------------------------------------------------------*/
+@import "shame";
+
+

@@ -25,39 +25,47 @@
 
 	<header id="masthead" class="site-header" role="banner">
 	    <nav role="navigation" id="navbar-main">
-	      <div class="navbar navbar-inverse navbar-static-top">
+	      <div class="navbar navbar-static-top">
 	        <div class="container">
-	          <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-	          <div class="navbar-header">
-	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-	              <span class="icon-bar"></span>
-	              <span class="icon-bar"></span>
-	              <span class="icon-bar"></span>
-	            </button>
+	        <div class="row flex">
+	        	<div class="col-xs-10 col-sm-6"><?php edith_theme_the_custom_logo(); ?></div>
+	        	<div class="col-xs-2 col-sm-6">
+	          		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			            <a href="#" class="toggle-menu"><span></span></a>
+			            <?php
+							$args = array(
+							'theme_location' => 'menu-1',
+							'depth' => 2,
+							'container' => false,
+							'menu_class' => 'nav navbar-nav navbar-left hidden-xs',
+							'walker' => new Bootstrap_Walker_Nav_Menu()
+							);
 
-	            <?php edith_theme_the_custom_logo(); ?>
-	             
-	          </div>
-
-	          <div class="navbar-collapse collapse navbar-responsive-collapse">
-	            <?php
-					$args = array(
-					'theme_location' => 'menu-1',
-					'depth' => 2,
-					'container' => false,
-					'menu_class' => 'nav navbar-nav navbar-right',
-					'walker' => new Bootstrap_Walker_Nav_Menu()
-					);
-
-					if (has_nav_menu('menu-1')) {
-					wp_nav_menu($args);
-					}
-	            ?>
-
-	          </div>
+							if (has_nav_menu('menu-1')) {
+							wp_nav_menu($args);
+							}
+			            ?>
+			     </div>
+	        </div>
 	        </div>
 	      </div>           
 	    </nav>
+	    <div class="mobile-nav">
+	    	<?php
+				$args = array(
+				'theme_location' => 'menu-1',
+				'depth' => 2,
+				'container' => false,
+				'menu_class' => '',
+				'walker' => new Bootstrap_Walker_Nav_Menu()
+				);
+
+				if (has_nav_menu('menu-1')) {
+				wp_nav_menu($args);
+				}
+		?>
+	    </div>
 	  </header><!-- #masthead -->
 
+	 <div class="container">
 	<div id="content" class="site-content">

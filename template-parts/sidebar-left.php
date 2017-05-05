@@ -1,20 +1,20 @@
 <?php
+/*
+Template Name: Sidebar-left
+*/
+?>
+<?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package edith-starter-theme
  */
 
-get_header(); ?>
+get_header();
+get_sidebar(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="sidebar-content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php
