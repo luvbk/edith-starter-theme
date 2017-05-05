@@ -16,7 +16,7 @@ var gulp = require( 'gulp' ),
   zip = require('gulp-zip');
 
 var config = {
-     bowerDir: './inc' 
+     bowerDir: './components' 
 }
  
 // Default error handler
@@ -35,7 +35,7 @@ gulp.task('zip', function () {
    './languages/*',
    './sass/**/*',
    './template-parts/*',
-   '!inc',
+   '!components/*',
    '!node_modules',
   ], {base: "."})
   .pipe(zip('edith-starter-theme.zip'))
