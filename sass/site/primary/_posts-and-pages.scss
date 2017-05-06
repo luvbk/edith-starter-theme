@@ -30,8 +30,8 @@
 .site-content{
 	@include make-row();
 	word-break: break-word; 
-	
-.content-area {
+
+.sidebar-content-area {
 	@include make-md-column(9);
 }
 

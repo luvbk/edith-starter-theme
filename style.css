@@ -5999,13 +5999,13 @@ button.close {
     display: table; }
   .site-content:after {
     clear: both; }
-  .site-content .content-area {
+  .site-content .sidebar-content-area {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px; }
     @media (min-width: 992px) {
-      .site-content .content-area {
+      .site-content .sidebar-content-area {
         float: left;
         width: 75%; } }
   .site-content .widget-area {
