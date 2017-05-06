@@ -6118,3 +6118,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.container-fluid {
+  padding: 0 50px; }

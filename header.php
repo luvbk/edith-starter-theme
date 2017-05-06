@@ -25,7 +25,7 @@
 	<header id="masthead" class="site-header" role="banner">
 	    <nav role="navigation" id="navbar-main">
 	      <div class="navbar navbar-static-top">
-	        <div class="container">
+	        <div class="container-fluid">
 	        <div class="row flex">
 	        	<div class="col-xs-10 col-sm-6"><?php edith_theme_the_custom_logo(); ?></div>
 	        	<div class="col-xs-2 col-sm-6">
@@ -66,5 +66,5 @@
 	    </div>
 	  </header><!-- #masthead -->
 
-	 <div class="container">
+	 <div class="container-fluid">
 	<div id="content" class="site-content">
