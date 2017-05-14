@@ -25,10 +25,10 @@
 	<header id="masthead" class="site-header" role="banner">
 	    <nav role="navigation" id="navbar-main">
 	      <div class="navbar navbar-static-top">
-	        <div class="container-fluid">
+	        <div class="container">
 	        <div class="row flex">
-	        	<div class="col-xs-10 col-sm-6"><?php edith_theme_the_custom_logo(); ?></div>
-	        	<div class="col-xs-2 col-sm-6">
+	        	<div class="col-xs-8 col-sm-6"><?php edith_theme_the_custom_logo(); ?></div>
+	        	<div class="col-xs-4 col-sm-6">
 	          		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 			            <a href="#" class="toggle-menu"><span></span></a>
 			            <?php
@@ -36,7 +36,7 @@
 							'theme_location' => 'menu-1',
 							'depth' => 2,
 							'container' => false,
-							'menu_class' => 'nav navbar-nav navbar-left hidden-xs',
+							'menu_class' => 'nav navbar-nav navbar-right hidden-xs',
 							'walker' => new Bootstrap_Walker_Nav_Menu()
 							);
 
@@ -66,5 +66,4 @@
 	    </div>
 	  </header><!-- #masthead -->
 
-	 <div class="container-fluid">
 	<div id="content" class="site-content">

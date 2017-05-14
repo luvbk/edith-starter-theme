@@ -22,3 +22,64 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// -------------------------------------------------------
+// List styles
+// -------------------------------------------------------
+
+// Mixins for list style types
+@mixin unordered {
+	 list-style-position: outside; 
+	 list-style-type: disc;
+}
+
+@mixin unordered-inside {
+	 list-style-position: inside; 
+	 list-style-type: disc;
+}
+
+@mixin ordered {
+	list-style-position: outside; 
+	list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+	list-style-position: inside; 
+	list-style-type: decimal;
+}
+
+@mixin nobullet {
+	list-style-type: none;
+}
+
+
+	
+// -------------------------------------------------------
+// Align things vertically (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+// -------------------------------------------------------
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align-transition($height) {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(- $height);
+  -ms-transform: translateY(- $height);
+  transform: translateY(- $height);
+}
+
+// -------------------------------------------------------
+// HEX to RGB
+// -------------------------------------------------------
+
+// http://codepen.io/sturobson/pen/hdKyv
+@mixin rgba($color, $value) {
+	background-color: $color;
+	background-color: rgba($color, $value);
+}

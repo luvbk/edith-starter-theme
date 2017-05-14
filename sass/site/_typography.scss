@@ -1,0 +1,56 @@
+// ------------------------------------------------------------
+// Global typography
+// ------------------------------------------------------------
+@font-face {
+    font-family: 'noedisplay';
+    src: url('fonts/noe-display-medium.eot');
+    src: url('fonts/noe-display-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/noe-display-medium.woff') format('woff'),
+         url('fonts/noe-display-medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hkgroteskregular';
+    src: url('fonts/hkgrotesk-regular-webfont.eot');
+    src: url('fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/hkgrotesk-regular-webfont.woff') format('woff'),
+         url('fonts/hkgrotesk-regular-webfont.ttf') format('truetype'),
+         url('fonts/hkgrotesk-regular-webfont.svg#hkgroteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'hkgroteskbold';
+    src: url('fonts/hkgrotesk-bold-webfont.eot');
+    src: url('fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/hkgrotesk-bold-webfont.woff') format('woff'),
+         url('fonts/hkgrotesk-bold-webfont.ttf') format('truetype'),
+         url('fonts/hkgrotesk-bold-webfont.svg#hkgroteskbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+// ------------------------------------------------------------
+// Fonts
+// ------------------------------------------------------------
+
+
+.font-body 					{font-family: 'noedisplay', Georgia, Times, serif;}
+.font-var 					{font-family: 'hkgroteskregular', Helvetica, Arial, sans-serif;}
+.font-var-bold              {font-family: 'hkgroteskbold', Helvetica, Arial, sans-serif;}
+
+// ------------------------------------------------------------
+// Core typography
+// ------------------------------------------------------------
+
+ul 													{ @include nobullet; } 						
+ol 													{ @include nobullet; }	
+li 													{ line-height: inherit; }					
+strong, b 											{ font-weight: bold; }
+em, i, q 											{ font-style: italic; }

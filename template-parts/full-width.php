@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Sidebar-Right
+Template Name: Full width template
 */
 ?>
 <?php
@@ -13,10 +13,9 @@ Template Name: Sidebar-Right
 
 get_header(); ?>
 
-	<div id="primary" class="sidebar-template container">
+<div id="primary" class="full-width-area container-fluid">
 		<main id="main" class="site-main row" role="main">
-			<div class="col-xs-12 col-md-8">
-
+			<div class="main-wrapper col-xs-12">
 				<?php
 				while ( have_posts() ) : the_post();
 
@@ -29,10 +28,7 @@ get_header(); ?>
 
 				endwhile; // End of the loop.
 				?>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<?php get_sidebar(); ?>
-			</div>
+			</div><!-- .main-wrapper-->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
